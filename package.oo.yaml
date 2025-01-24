@@ -1,0 +1,17 @@
+icon: https://oomol-flows.oss-cn-hangzhou.aliyuncs.com/1723878793_sharp-image-process-v3.png
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: pip install pandas
+  bootstrap: |
+    pnpm install && pip install --user -r requirements.txt
+  dependencies:
+    sharp: 0.0.1
+    tools: 0.0.3
+dependencies:
+  {}
+name: sharp
+version: 0.0.1
+description: Encapsulate the open source library "sharp" into a workflow node
+displayName: Sharp
+releaseNotes: init sharp node
+repository: https://github.com/oomol-flows/sharp

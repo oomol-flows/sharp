@@ -1,0 +1,38 @@
+title: ResizeImage
+executor:
+  name: nodejs
+  options:
+    entry: index.ts
+inputs_def:
+  - handle: sharp
+    json_schema:
+      contentMediaType: oomol/var
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+      ui:widget: any
+  - handle: width
+    json_schema:
+      type: number
+  - handle: height
+    json_schema:
+      type: number
+outputs_def:
+  - handle: sharp
+    json_schema:
+      contentMediaType: oomol/var
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+      ui:widget: any
+icon: ":fa6-solid:crop-simple:currentColor:"

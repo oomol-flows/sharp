@@ -1,0 +1,37 @@
+inputs_def:
+  - handle: sharp
+    description: Input
+    json_schema:
+      contentMediaType: oomol/var
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+      ui:widget: any
+    value: ""
+outputs_def:
+  - handle: sharp
+    description: Output
+    json_schema:
+      contentMediaType: oomol/var
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+      ui:widget: any
+icon: ":fa6-solid:expand:currentColor:"
+ui:
+  default_width: 530
+executor:
+  name: nodejs
+  options:
+    spawn: false
+    entry: main.ts
