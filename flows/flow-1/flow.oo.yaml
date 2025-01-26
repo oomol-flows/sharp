@@ -5,7 +5,8 @@ nodes:
     inputs_from:
       - handle: image
         from_node:
-          []
+          - node_id: url_to_path#1
+            output_handle: address
   - task: self::ResizeImage
     title: "ResizeImage #1"
     node_id: ResizeImage#1
@@ -71,3 +72,9 @@ nodes:
         from_node:
           - node_id: Flip#1
             output_handle: sharp
+  - task: oomol-file::url_to_path
+    title: "URL to path  #1"
+    node_id: url_to_path#1
+    inputs_from:
+      - handle: url
+        value: https://oomol-flows.oss-cn-hangzhou.aliyuncs.com/rikke-hembre-JAGvVkCs27s-unsplash.jpg
