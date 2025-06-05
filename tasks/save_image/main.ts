@@ -17,7 +17,7 @@ export default async function (
 ): Promise<Partial<Outputs> | undefined | void> {
     const { sharp, save_address, image_name, image_format } = params;
 
-    const image_save_address = `${save_address}/${image_name ? image_name : context.jobId}.${image_format ? image_format : 'jpg'}`;
+    const image_save_address = `${save_address ? save_address : context.sessionDir}/${image_name ? image_name : context.jobId}.${image_format ? image_format : 'jpg'}`;
     await sharp.toFile(image_save_address)
 
     return { save_address: image_save_address };

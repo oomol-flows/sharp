@@ -12,7 +12,6 @@ inputs_def:
         - array
         - "null"
       ui:widget: any
-    value: ""
 outputs_def:
   - handle: sharp
     description: Output
