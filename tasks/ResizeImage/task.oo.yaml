@@ -35,4 +35,4 @@ outputs_def:
         - array
         - "null"
       ui:widget: any
-icon: ":fa6-solid:crop-simple:currentColor:"
+icon: ":carbon:ibm-cloud-vpc-endpoints:"

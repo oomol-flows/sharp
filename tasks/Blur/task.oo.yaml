@@ -36,4 +36,4 @@ outputs_def:
         - array
         - "null"
       ui:widget: any
-icon: ":fa6-solid:file-image:"
+icon: ":carbon:window-black-saturation:"

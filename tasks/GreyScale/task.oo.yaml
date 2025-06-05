@@ -27,7 +27,7 @@ outputs_def:
         - array
         - "null"
       ui:widget: any
-icon: ":fa6-solid:expand:currentColor:"
+icon: ":carbon:scan-disabled:"
 ui:
   default_width: 530
 executor:

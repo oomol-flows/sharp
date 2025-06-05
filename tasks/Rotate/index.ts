@@ -1,5 +1,5 @@
-import type { Context } from "@oomol/oocana-types";
-import sharp, { Sharp } from "sharp";
+import type { Context } from "@oomol/types/oocana";
+import { Sharp } from "sharp";
 
 type BlockContext = Context<Inputs, Outputs>;
 type Inputs = Readonly<{ sharp: Sharp, rotate: number }>;

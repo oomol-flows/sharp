@@ -78,3 +78,16 @@ nodes:
     inputs_from:
       - handle: url
         value: https://oomol-flows.oss-cn-hangzhou.aliyuncs.com/rikke-hembre-JAGvVkCs27s-unsplash.jpg
+  - node_id: save_image#1
+    task: self::save_image
+    inputs_from:
+      - handle: sharp
+        from_node:
+          - node_id: Flop#1
+            output_handle: sharp
+      - handle: save_address
+        value:
+      - handle: image_name
+        value: null
+      - handle: image_format
+        value: jpg

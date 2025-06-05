@@ -1,0 +1,51 @@
+ui:
+  default_width: 450
+inputs_def:
+  - handle: sharp
+    json_schema:
+      contentMediaType: oomol/var
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+      ui:widget: any
+    kind: nodejs
+    nullable: false
+  - handle: save_address
+    json_schema:
+      type: string
+      ui:widget: dir
+    value:
+    nullable: true
+  - handle: image_name
+    json_schema:
+      type: string
+    value:
+    nullable: true
+  - handle: image_format
+    json_schema:
+      enum:
+        - jpg
+        - png
+      ui:options:
+        labels:
+          - jpg
+          - png
+    value: jpg
+outputs_def:
+  - handle: save_address
+    description: Output
+    json_schema:
+      type: string
+      ui:widget: file
+executor:
+  name: nodejs
+  options:
+    entry: main.ts
+    spawn: false
+title: Save Image
+icon: ":carbon:save:"

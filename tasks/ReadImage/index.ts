@@ -1,4 +1,4 @@
-import type { Context } from "@oomol/oocana-types";
+import type { Context } from "@oomol/types/oocana";
 import sharp, { Sharp } from "sharp";
 
 type BlockContext = Context<Inputs, Outputs>;
