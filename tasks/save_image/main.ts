@@ -1,5 +1,6 @@
+import { Context } from "@oomol/types/oocana";
+
 //#region generated meta
-import type { Context } from "@oomol/types/oocana";
 type Inputs = {
     sharp: any;
     save_address: string | null;
@@ -10,6 +11,8 @@ type Outputs = {
     save_address: string;
 };
 //#endregion
+//Your code is below this line
+
 
 export default async function (
     params: Inputs,
