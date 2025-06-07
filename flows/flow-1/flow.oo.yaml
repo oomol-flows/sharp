@@ -5,8 +5,8 @@ nodes:
     inputs_from:
       - handle: image
         from_node:
-          - node_id: url_to_path#1
-            output_handle: address
+          - node_id: url_to_file#1
+            output_handle: file_path
   - task: self::ResizeImage
     title: "ResizeImage #1"
     node_id: ResizeImage#1
@@ -72,12 +72,6 @@ nodes:
         from_node:
           - node_id: Flip#1
             output_handle: sharp
-  - task: oomol-file::url_to_path
-    title: "URL to path  #1"
-    node_id: url_to_path#1
-    inputs_from:
-      - handle: url
-        value: https://oomol-flows.oss-cn-hangzhou.aliyuncs.com/rikke-hembre-JAGvVkCs27s-unsplash.jpg
   - node_id: save_image#1
     task: self::save_image
     inputs_from:
@@ -91,3 +85,19 @@ nodes:
         value: null
       - handle: image_format
         value: jpg
+  - node_id: url_to_file#1
+    title: "URL to file  #1"
+    inputs_from:
+      - handle: url
+        value: https://oomol-flows.oss-cn-hangzhou.aliyuncs.com/rikke-hembre-JAGvVkCs27s-unsplash.jpg
+      - handle: query
+        value:
+          {}
+      - handle: headers
+        value:
+          {}
+      - handle: timeout
+        value: 0
+      - handle: retry_times
+        value: 1
+    task: oomol-file::url_to_file

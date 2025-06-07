@@ -8,10 +8,10 @@ scripts:
     sharp: 0.0.1
     tools: 0.0.3
 dependencies:
-  oomol-file: 0.0.7
+  oomol-file: 0.0.10
 name: sharp
-version: 0.0.9
+version: 0.0.10
 description: Encapsulate the open source library "sharp" into a workflow node
 displayName: Sharp
-releaseNotes: update save block
+releaseNotes: update flow
 repository: https://github.com/oomol-flows/sharp
