@@ -1,0 +1,20 @@
+nodes:
+  - node_id: image-process#1
+    title: "image-process #1"
+    inputs_from:
+      - handle: image
+        value: /oomol-driver/oomol-storage/images/20250601-200234.png
+        from_flow:
+          - input_handle: item
+      - handle: save_address
+        value: /oomol-driver/oomol-storage/images_new
+      - handle: image_name
+        value: null
+      - handle: image_format
+        value: jpg
+    subflow: self::image-process
+outputs_from:
+  - handle: item
+    from_node:
+      - node_id: image-process#1
+        output_handle: save_address

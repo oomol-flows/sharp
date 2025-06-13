@@ -1,0 +1,31 @@
+nodes:
+  - task: self::ReadImage
+    title: "ReadImage #1"
+    node_id: ReadImage#1
+    inputs_from:
+      - handle: image
+        from_node:
+          []
+  - task: self::GreyScale
+    node_id: GreyScale#1
+    inputs_from:
+      - handle: sharp
+        value: ""
+        from_node:
+          - node_id: ReadImage#1
+            output_handle: sharp
+  - node_id: save_image#1
+    title: "Save Image #1"
+    inputs_from:
+      - handle: sharp
+        from_node:
+          - node_id: GreyScale#1
+            output_handle: sharp
+      - handle: save_address
+        value: null
+      - handle: image_name
+        value: null
+      - handle: image_format
+        value: jpg
+    task: self::save_image
+title: image-process
