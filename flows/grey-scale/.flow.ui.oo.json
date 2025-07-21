@@ -1,0 +1,39 @@
+{
+  "nodes": {
+    "ReadImage#1": {
+      "rfNode": {
+        "position": {
+          "x": 481,
+          "y": 0
+        }
+      }
+    },
+    "GreyScale#1": {
+      "contentWidth": 530,
+      "rfNode": {
+        "position": {
+          "x": 967,
+          "y": 0
+        }
+      }
+    },
+    "save_image#1": {
+      "contentWidth": 536.0509764033608,
+      "rfNode": {
+        "position": {
+          "x": 1563,
+          "y": 35.5
+        }
+      }
+    },
+    "+value#1": {
+      "contentWidth": 415,
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 110
+        }
+      }
+    }
+  }
+}
